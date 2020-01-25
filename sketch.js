@@ -16,7 +16,9 @@ function draw() {
 	let radius_hour = map(hour(), 0, 24, 0, 800, true)/2;
 	let radius_minute = map(minute(), 0, 60, 0, radius_hour, true)/2;
 	let radius_sec = map(second(), 0, 60, 0, radius_minute)/2;
-	console.log(radius_sec);
+	if(minute() === 0) {
+		let radius_sec = map(second(), 0, 60, 0, radius_hour)/2;
+	}
 	//let hx = map(mouseX,0,width,350,450,true);
 	//let hy = map(mouseY,0,height,200,400,true);
 	let mx = map(mouseX,0,width, 350, 450, true);
